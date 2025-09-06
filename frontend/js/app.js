@@ -1,0 +1,1 @@
+console.log('Michael AI Frontend loaded');

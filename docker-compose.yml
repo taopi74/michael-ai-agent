@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    container_name: michael_backend
+    environment:
+      - DATABASE_URL=sqlite:////app/database/business_data.db
+      - ADMIN_API_KEY=demo-admin-key
+      - REPORT_EVERY_MINUTES=0
+      - GROQ_API_KEY=put-your-groq-key-here
+      - GROQ_MODEL_NAME=llama-3.1-8b-instant
+    volumes:
+      - ./backend/app:/app/app
+      - ./database:/app/database
+    ports:
+      - "8000:8000"
+    command: ["/bin/bash","/app/entrypoint.sh"]
+    depends_on: []
+
+  nginx:
+    image: nginx:alpine
+    container_name: michael_nginx
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
