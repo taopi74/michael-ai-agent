@@ -5,45 +5,44 @@
 ```markdown
 # Michael – The AI Business Analyst Agent
 
-Michael is an **AI-powered Business Analyst Agent** that allows users to interact with structured business data using natural language.  
-The system understands queries, converts them into SQL, retrieves results from a relational database, and presents them in a **human-friendly format** (text, tables, or visualizations).  
+Michael is an AI-powered Business Analyst Agent that allows users to interact with structured business data using natural language.  
+The system understands queries, converts them into SQL, retrieves results from a relational database, and presents them in a human-friendly format (text, tables, or visualizations).  
 
----
+
 
 ## 🚀 Features
 
-1. **Natural Language Querying**  
+1. Natural Language Querying  
    - Ask questions like:  
-     - *"What were the top 5 products sold last month?"*  
-     - *"Show me the revenue growth trend in the last 6 months"*  
+     - "What were the top 5 products sold last month?" 
+     - "Show me the revenue growth trend in the last 6 months" 
 
-2. **Database Integration**  
+2. Database Integration
    - Supports relational databases (PostgreSQL, MySQL, SQLite).  
    - Stores structured data such as sales, customers, products, and transactions.  
 
-3. **AI-Powered Query Translation**  
+3. AI-Powered Query Translation  
    - Converts natural language queries into SQL automatically.  
 
-4. **Human-Friendly Responses**  
+4. Human-Friendly Responses  
    - Returns results as text summaries, tables, and simple charts/graphs.  
 
-5. **Conversation History**  
+5. Conversation History  
    - Saves queries and responses into the database for tracking and analysis.  
 
-6. **(Optional)** Data-driven Recommendations  
-   - Example: *"Based on current sales, you should stock more of Product X."*  
+6. (Optional) Data-driven Recommendations  
+   - Example: "Based on current sales, you should stock more of Product X."  
 
----
+
 
 ## 🏗️ System Architecture
 
-```
+
 
 User → FastAPI Backend → NLP/AI Layer (NL2SQL) → Database (SQLite)
 ↑                                                       ↓
 └─────────────── Conversation History ──────────────────┘
 
-```
 
 - **Frontend**: CLI / REST API requests  
 - **Backend**: FastAPI (Python)  
@@ -55,7 +54,7 @@ User → FastAPI Backend → NLP/AI Layer (NL2SQL) → Database (SQLite)
 
 ## 📂 Project Structure
 
-```
+
 
 michael_ai/
 ├── backend/
@@ -83,9 +82,7 @@ michael_ai/
 ├── docker-compose.yml
 └── setup_database.py
 
-````
 
----
 
 ## 🛠️ Setup & Installation
 
@@ -170,19 +167,9 @@ CREATE TABLE conversations (
     response TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-```
 
----
 
-## 🎥 Demo
 
-A short demo video is included in the `docs/demo.mp4` file showing:
-
-* User queries
-* AI-generated SQL
-* Responses in text, tables, and charts
-
----
 
 ## 📌 Future Improvements
 
@@ -191,13 +178,12 @@ A short demo video is included in the `docs/demo.mp4` file showing:
 * Multi-language query support
 * User authentication
 
----
+
 
 ## 🤝 Contributors
 
 * **Project Lead & Developer**: Tarqul Alam Opi
 
----
 
 ## 📄 License
 
