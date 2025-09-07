@@ -50,7 +50,6 @@ User → FastAPI Backend → NLP/AI Layer (NL2SQL) → Database (SQLite)
 - **NL2SQL Engine**: Open-source NLP → SQL conversion models (HuggingFace Transformers, etc.)  
 - **Visualization**: Matplotlib / Plotly  
 
----
 
 ## 📂 Project Structure
 
